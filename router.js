@@ -47,7 +47,7 @@ export async function router() {
   const section = new URLSearchParams(query).get('secao');
   requestAnimationFrame(() => {
     if (id !== requestId) return;
-    const target = section && app.querySelector(`[id="${CSS.escape(section)}"]`);
+    const target = section && (app.querySelector(`[id="${CSS.escape(section)}"]`) || (section === 'contato' ? document.querySelector('footer') : null));
     if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
     else window.scrollTo({ top: 0, behavior: 'instant' });
   });
