@@ -878,3 +878,11 @@ h1.page-title{font-size:clamp(32px,4vw,48px);line-height:1.15;letter-spacing:-1p
 /* Ajustes individuais para manter rosto e parte superior no enquadramento. */
 .media-card img.stage-photo-raised{object-position:center 23%}
 .video-card video.development-video{object-position:center 25%}
+
+/* Home: preserva o topo dos retratos em todos os tamanhos de tela. */
+#app .hero .hero-media{background-position:center top}
+#sobre .about-image{background-position:center top}
+#servicos .service-media img{object-position:center top}
+#servicos .area-card[href="#/palestras"] .service-media img{object-position:center 18%}
+
+#servicos .area-card[href="#/rh-nr1"] .service-media img{object-position:center center}
